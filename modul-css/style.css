@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background-color: #FFFACD;
+  font-family: sans-serif;
+}
+
+
+.left-panel {
+  background-color: #ffff;
+  margin: 1%;
+  width: 18%;
+  height: 320px;
+  float: left;
+  border-radius: 30px;
+   border-right: 1px
+   solid #000000;
+   border-bottom: 1px  
+   solid #000000;
+}
+
+.right-panel {
+  background-color: #ffff;
+  margin: 1%;
+  width: 75%;
+  height: auto;
+  float: left;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logounud {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-panel {
+  text-align: center;
+  color: #FFFFFF;
+  padding: : auto;
+  background-color: #000000;
+}
+
+.sub-panel-1 a {
+  text-align: center;
+  padding: auto;
+  color:  #000000;
+}
+
+.cover {
+  clear: left;
+  height: 260px;
+  background-image: url(./image/cover.jpg);
+  background-size: 100% 100%;
+}
+.navbar {
+  width: 100%;
+  height: 25px;
+  background-color:  #000000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  float: right;
+}
+
+li a {
+  
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 1px 20px;
+  margin: 1px 60px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color:  #f0b101;
+}
+
+.deskripsi {
+padding:20px 200px;
+text-align: left;
+}
+
+.deskripsi h1{
+  font-size: 40px;
+  color: #000000;
+}
+.deskripsi h2{
+  font-size: 30px;
+  color: #000000;
+}
+
+.deskripsi p{
+  font-size: 20px;
+}
+
+.des h1{
+  font-size: 40px;
+  color: #000000;
+}
+.des h2{
+  font-size: 30px;
+  color: #000000;
+}
+
+.des p{
+  font-size: 20px;
+}
+
+.polaroid {
+  float: left;
+  margin-left:40px ;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.garis {
+  border-bottom: 1px solid #000000;
+}

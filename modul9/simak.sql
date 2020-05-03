@@ -2,8 +2,8 @@
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 03 Bulan Mei 2020 pada 16.16
+-- Host: 127.1.1.1
+-- Waktu pembuatan: 03 Bulan Mei 2020 pada 10.15
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -24,10 +24,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Struktur dari tabel `mahasiswa`
---
-
 CREATE TABLE `mahasiswa` (
   `id` int(11) NOT NULL,
   `namalengkap` varchar(50) NOT NULL,
@@ -46,19 +42,9 @@ CREATE TABLE `mahasiswa` (
 -- Indexes for dumped tables
 --
 
---
--- Indeks untuk tabel `mahasiswa`
---
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `mahasiswa`
---
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1588470662;
 COMMIT;

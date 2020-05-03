@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="tubuh">
+		<div class="header">
+			<h2 style="margin: 5px; font-weight: bold;">To Do List</h2>
+			<input type="text" id="tambah_text" placeholder="Tambahkan List">
+			<span onclick="newElement()" class="tambah_tombol">Tambah</span>
+		</div>
+		<ul id="list">
+			<li class="terlaksana">07.00 Bangun Tidur</li>
+			<li>07.30 Mandi</li>
+			<li>08.00 Sarapan</li>
+			<li>09.00 Kuliah</li>
+			<li>13.00 Makan Siang</li>
+			<li>13.30 Kuliah</li>
+			<li>16.30 Tidur Siang</li>
+			<li>18.00 Mandi Sore</li>
+			<li>18.30 Mengerjakan Tugas</li>
+			<li>20.30 Hiburan Bermain Game</li>
+			<li>23.00 Tidur Malam</li>
+		</ul>
+	</div>
+
+	<script>
+		var myNodelist = document.getElementsByTagName("LI");
+		var i;
+		for (i = 0; i < myNodelist.length; i++) {
+		  var span = document.createElement("SPAN");
+		  var txt = document.createTextNode("\u00D7");
+		  span.className = "tutup";
+		  span.appendChild(txt);
+		  myNodelist[i].appendChild(span);
+		}
+
+		var close = document.getElementsByClassName("tutup");
+		var i;
+		for (i = 0; i < close.length; i++) {
+		  close[i].onclick = function() {
+		    var div = this.parentElement;
+		    div.style.display = "none";
+		  }
+		}
+
+		var list = document.querySelector('ul');
+		list.addEventListener('click', function(ev) {
+		  if (ev.target.tagName === 'LI') {
+		    ev.target.classList.toggle('terlaksana');
+		  }
+		}, false);
+
+		function newElement() {
+		  var li = document.createElement("li");
+		  var inputValue = document.getElementById("tambah_text").value;
+		  var t = document.createTextNode(inputValue);
+		  li.appendChild(t);
+		  if (inputValue === '') {
+		    alert("Harap Mengisi List...");
+		  } else {
+		    document.getElementById("list").appendChild(li);
+		  }
+		  document.getElementById("tambah_text").value = "";
+
+		  var span = document.createElement("SPAN");
+		  var txt = document.createTextNode("\u00D7");
+		  span.className = "tutup";
+		  span.appendChild(txt);
+		  li.appendChild(span);
+
+		  for (i = 0; i < close.length; i++) {
+		    close[i].onclick = function() {
+		      var div = this.parentElement;
+		      div.style.display = "none";
+		    }
+		  }
+		}
+	</script>
+
+</body>
+</html>
